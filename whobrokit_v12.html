@@ -1811,13 +1811,10 @@
       const formMsg = document.getElementById("form-msg");
       const formBtn = document.getElementById("form-submit");
       const API_BASE_URL =
-        window.WHOBROKIT_API_BASE_URL ||
-        (window.location.protocol === "file:"
+        window.location.hostname === "127.0.0.1" ||
+        window.location.hostname === "localhost"
           ? "http://[::1]:8080"
-          : ["127.0.0.1", "localhost"].includes(window.location.hostname) &&
-              window.location.port === "5500"
-            ? "http://[::1]:8080"
-            : "");
+          : "https://whobrokit-v12.onrender.com";
 
       function showMsg(type, text) {
         formMsg.className = "form-msg " + type;
