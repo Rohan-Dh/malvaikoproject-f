@@ -96,25 +96,6 @@ function App() {
     <>
       <LegacyMarkup markup={legacyMarkup} />
 
-      {/* Floating admin button */}
-      <button
-        onClick={openAdmin}
-        style={{
-          position: "fixed",
-          right: 12,
-          bottom: 12,
-          zIndex: 9998,
-          padding: "8px 10px",
-          borderRadius: 6,
-          border: "none",
-          background: "#111",
-          color: "#fff",
-          cursor: "pointer",
-        }}
-        aria-label="Open admin login"
-      >
-        Admin
-      </button>
     </>
   );
 }
